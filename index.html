@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Brewscape: Tea House Idle</title>
+    <style>
+      /* Add your CSS styles for the game interface here */
+
+      body {
+        background-color: #f5f1e9;
+        font-family: Arial, sans-serif;
+        color: #444;
+      }
+
+      h2 {
+        color: #285238;
+        border-bottom: 2px solid #285238;
+        padding-bottom: 5px;
+      }
+
+      .tea-house {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+      }
+
+      .tea-selection,
+      .tea-brewing,
+      .customer-requests,
+      .upgrades {
+        width: 20%;
+        background-color: #f5f1e9;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .progress-bar {
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        height: 20px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+
+      #progress-bar-fill {
+        background-color: #95b388;
+        height: 100%;
+      }
+
+      button {
+        margin: 5px;
+        padding: 8px 16px;
+        background-color: #285238;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #3d7552;
+      }
+
+      input[type="number"] {
+        width: 100px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .input-container {
+        margin-top: 20px;
+      }
+
+      .customer-requests button {
+        background-color: #9a887f;
+      }
+
+      .upgrades button {
+        background-color: #9a887f;
+      }
+
+      .customer-requests button:hover,
+      .upgrades button:hover {
+        background-color: #bfaba1;
+      }
+
+      .tea-selection button {
+        background-color: #9ebc9f;
+      }
+
+      .tea-selection button:hover {
+        background-color: #b8d1b2;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="tea-house">
+      <div class="tea-selection">
+        <h2>Tea Selection</h2>
+        <button onclick="brewTea(0)">Green Tea (15 mins)</button>
+        <button onclick="brewTea(1)">Black Tea (20 mins)</button>
+        <button onclick="brewTea(2)">Jasmine Tea (25 mins)</button>
+        <button onclick="brewTea(3)">Chai Tea (30 mins)</button>
+        <button onclick="brewTea(4)">Oolong Tea (25 mins)</button>
+        <button onclick="brewTea(5)">Butterfly Pea Flower Tea (20 mins)</button>
+        <!--
+        <div class="input-container">
+          <label for="brewing-time">Enter Brewing Time (minutes):</label>
+          <input type="number" id="brewing-time" min="1" max="120" step="1">
+          <div></div>
+          <label for="brewing-temperature">Enter Brewing Temperature (°C):</label>
+          <input type="number" id="brewing-temperature" min="50" max="100" step="5">
+          <button onclick="customBrewTea()">Custom Brew</button>
+        </div>
+      -->
+      </div>
+      <div class="tea-brewing">
+        <h2>Tea Brewing</h2>
+        <p id="tea-status">No tea brewing currently.</p>
+        <div class="progress-bar">
+          <div id="progress-bar-fill"></div>
+        </div>
+      </div>
+      <div class="customer-requests">
+        <h2>Customer Requests</h2>
+        <p id="customer-request">No customers currently.</p>
+        <button onclick="fulfillCustomerRequest()">Fulfill Request</button>
+      </div>
+      <!-- <div class="input-container"> <label for="interval-selector">Select Brewing Time Interval:</label> <select id="interval-selector" onchange="updateBrewingTime()">
+          <option value="5">5 minutes</option>
+          <option value="10">10 minutes</option>
+          <option value="30">30 minutes</option>
+          <option value="60">1 hour</option>
+        </select> </div> 
+        -->
+      <div class="upgrades">
+        <h2>Upgrades</h2>
+        <button onclick="buyUpgrade(0)">Tea Brewing Machine</button>
+        <button onclick="buyUpgrade(1)">Tea House Decorations</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+  </body>
+
+</html>

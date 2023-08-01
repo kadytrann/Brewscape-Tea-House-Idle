@@ -1,0 +1,92 @@
+/* Add your CSS styles for the game interface here */
+
+body {
+  background-color: #f5f1e9;
+  font-family: Arial, sans-serif;
+  color: #444;
+}
+
+h2 {
+  color: #285238;
+  border-bottom: 2px solid #285238;
+  padding-bottom: 5px;
+}
+
+.tea-house {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.tea-selection,
+.tea-brewing,
+.customer-requests,
+.upgrades {
+  width: 20%;
+  background-color: #f5f1e9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  height: 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+#progress-bar-fill {
+  background-color: #95b388;
+  height: 100%;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: #285238;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3d7552;
+}
+
+input[type="number"] {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+.customer-requests button {
+  background-color: #9a887f;
+}
+
+.upgrades button {
+  background-color: #9a887f;
+}
+
+.customer-requests button:hover,
+.upgrades button:hover {
+  background-color: #bfaba1;
+}
+
+.tea-selection button {
+  background-color: #9ebc9f;
+}
+
+.tea-selection button:hover {
+  background-color: #b8d1b2;
+}
